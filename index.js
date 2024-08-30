@@ -6,14 +6,13 @@ const port = 3000;
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://pvaishali135:FmncLBdCTHClbqb0@cluster0.5g2vf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB');
-}).catch(err => {
-  console.error('Failed to connect to MongoDB', err);
-});
+mongoose.connect('mongodb+srv://pvaishali135:FmncLBdCTHClbqb0@cluster0.5g2vf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(err => {
+    console.error('Failed to connect to MongoDB', err);
+  });
 
 // Define a schema and model
 const itemSchema = new mongoose.Schema({
