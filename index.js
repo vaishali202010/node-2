@@ -6,9 +6,7 @@ const port = 3001;
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://pvaishali135:FmncLBdCTHClbqb0@cluster0.5g2vf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true', {
-  // No need to specify useNewUrlParser or useUnifiedTopology anymore
-})
+mongoose.connect('mongodb+srv://pvaishali135:FmncLBdCTHClbqb0@cluster0.5g2vf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true')
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -80,4 +78,3 @@ app.delete('/items/:id', async (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server running at http://localhost:${port}`);
 });
-
