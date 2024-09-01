@@ -21,6 +21,11 @@ const itemSchema = new mongoose.Schema({
 
 const Item = mongoose.model('Item', itemSchema);
 
+// default route
+app.get('/', async (req, res) => {
+res.status(200).json({success:'api sucessfull running'})
+});
+
 // GET all items
 app.get('/items', async (req, res) => {
   try {
